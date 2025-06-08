@@ -208,7 +208,7 @@ where
     /// Set the full scale range of the gyroscope
     pub fn set_gyro_range(&mut self, range: GyroRange) -> Result<(), SI::InterfaceError> {
         self.gyro_scale = range.scale();
-        self.si.register_write(REG_GYRO_CONFIG, (range as u8) << 2)
+        self.si.register_write(REG_GYRO_CONFIG, (range as u8) << 3)
     }
 
     pub fn get_raw_accel(&mut self) -> Result<[i16; 3], SI::InterfaceError> {
