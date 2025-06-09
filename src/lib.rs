@@ -295,7 +295,7 @@ impl GyroRange {
 
     /// Gyro range in radians per second per bit
     pub(crate) fn scale(&self) -> f32 {
-        Self::RADIANS_PER_DEGREE * self.resolution() / (16.4 as f32)
+        Self::RADIANS_PER_DEGREE * self.resolution()
     }
 
     /// Gyro resolution in degrees per second per bit
